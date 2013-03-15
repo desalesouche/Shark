@@ -1,1 +1,0 @@
-cmd_drivers/samsung/fm_si47xx/si47xx-drv.o := /home/perka/sgs3/toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld -EL    -r -o drivers/samsung/fm_si47xx/si47xx-drv.o drivers/samsung/fm_si47xx/Si47xx_i2c_drv.o drivers/samsung/fm_si47xx/Si47xx_dev.o 

@@ -1,1 +1,0 @@
-cmd_arch/arm/mvp/mvpkm/mvpkm.ko := /home/perka/sgs3/toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld -EL -r  -T /home/perka/GT-I9300/u8/scripts/module-common.lds --build-id  -o arch/arm/mvp/mvpkm/mvpkm.ko arch/arm/mvp/mvpkm/mvpkm.o arch/arm/mvp/mvpkm/mvpkm.mod.o
