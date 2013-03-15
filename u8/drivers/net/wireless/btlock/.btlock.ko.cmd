@@ -1,1 +1,0 @@
-cmd_drivers/net/wireless/btlock/btlock.ko := /home/perka/sgs3/toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld -EL -r  -T /home/perka/GT-I9300/u8/scripts/module-common.lds --build-id --strip-debug -o drivers/net/wireless/btlock/btlock.ko drivers/net/wireless/btlock/btlock.o drivers/net/wireless/btlock/btlock.mod.o

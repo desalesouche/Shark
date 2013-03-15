@@ -1,1 +1,0 @@
-cmd_drivers/sensor/built-in.o :=  /home/perka/sgs3/toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld -EL    -r -o drivers/sensor/built-in.o drivers/sensor/sensors_core.o drivers/sensor/lsm330dlc_accel.o drivers/sensor/lsm330dlc_gyro.o drivers/sensor/ak8975.o drivers/sensor/cm36651.o drivers/sensor/lps331ap.o 

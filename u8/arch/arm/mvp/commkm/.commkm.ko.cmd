@@ -1,1 +1,0 @@
-cmd_arch/arm/mvp/commkm/commkm.ko := /home/perka/sgs3/toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld -EL -r  -T /home/perka/GT-I9300/u8/scripts/module-common.lds --build-id --strip-debug -o arch/arm/mvp/commkm/commkm.ko arch/arm/mvp/commkm/commkm.o arch/arm/mvp/commkm/commkm.mod.o

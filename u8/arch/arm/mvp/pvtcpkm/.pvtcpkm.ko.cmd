@@ -1,1 +1,0 @@
-cmd_arch/arm/mvp/pvtcpkm/pvtcpkm.ko := /home/perka/sgs3/toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld -EL -r  -T /home/perka/GT-I9300/u8/scripts/module-common.lds --build-id --strip-debug -o arch/arm/mvp/pvtcpkm/pvtcpkm.ko arch/arm/mvp/pvtcpkm/pvtcpkm.o arch/arm/mvp/pvtcpkm/pvtcpkm.mod.o
