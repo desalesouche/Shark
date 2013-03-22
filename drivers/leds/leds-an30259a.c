@@ -909,7 +909,7 @@ static int __devinit an30259a_probe(struct i2c_client *client,
 #ifdef SEC_LED_SPECIFIC
 
 	// standard setting for fading is off (=it will blink)
-	led_enable_fade = 0;
+	led_enable_fade = 1;
 
 	led_dev = device_create(sec_class, NULL, 0, data, "led");
 	if (IS_ERR(led_dev)) {
