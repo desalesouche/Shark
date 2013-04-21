@@ -22,7 +22,11 @@
  * software in any way with any other Broadcom software provided under a license
  * other than the GPL, without Broadcom's express prior written consent.
  *
+<<<<<<< HEAD
  * $Id: bcmsdpcm.h 291086 2011-10-21 01:17:24Z $
+=======
+ * $Id: bcmsdpcm.h 364353 2012-10-23 20:31:46Z $
+>>>>>>> 91ef79f... bcmdhd: wifi drivers from I9500 sources
  */
 
 #ifndef	_bcmsdpcm_h_

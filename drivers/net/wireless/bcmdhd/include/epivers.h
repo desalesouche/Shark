@@ -28,8 +28,9 @@
 
 #define	EPI_MAJOR_VERSION	1
 
-#define	EPI_MINOR_VERSION	28
+#define	EPI_MINOR_VERSION	61
 
+<<<<<<< HEAD
 #define	EPI_RC_NUMBER		11
 
 #define	EPI_INCREMENTAL_NUMBER	12
@@ -50,6 +51,28 @@
 #define	EPI_VERSION_STR		"1.28.11.12 (r WLTEST)"
 #else
 #define	EPI_VERSION_STR		"1.28.11.12 (Add_p2pPatch_1012)"
+=======
+#define	EPI_RC_NUMBER		47
+
+#define	EPI_INCREMENTAL_NUMBER	0
+
+#define	EPI_BUILD_NUMBER	0
+
+#define	EPI_VERSION		1, 61, 47, 0
+
+#define	EPI_VERSION_NUM		0x013d2f00
+
+#define EPI_VERSION_DEV		1.61.47
+
+/* Driver Version String, ASCII, 32 chars max */
+#ifdef BCMINTERNAL
+#define	EPI_VERSION_STR		"1.61.47 (r BCMINT)"
+#else
+#ifdef WLTEST
+#define	EPI_VERSION_STR		"1.61.47 (r WLTEST)"
+#else
+#define	EPI_VERSION_STR		"1.61.47 (r)"
+>>>>>>> 91ef79f... bcmdhd: wifi drivers from I9500 sources
 #endif
 #endif /* BCMINTERNAL */
 
