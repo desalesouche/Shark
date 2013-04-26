@@ -1920,8 +1920,8 @@ MapWSPHKVA(MvpkmVM *vm, HkvaMapInfo *mapInfo)
     */
    prot = PAGE_KERNEL_EXEC;
 
-   retval = (void*)map_vm_area(vm->wspHkvaArea, prot, &pagesPtr);
-  if (retval < 0) {
+   retval = map_vm_area(vm->wspHkvaArea, prot, &pagesPtr);
+   if (retval < 0) {
       goto err;
    }
 
@@ -2108,7 +2108,6 @@ SetupMonitor(MvpkmVM *vm)
       register uint32 r4 asm("r4") = hsctlr;
 
       asm volatile (
-		 ".arch_extension sec\n"
          "smc 0"
          :
          : "r" (r0), "r" (r1), "r" (r2), "r" (r3), "r" (r4)

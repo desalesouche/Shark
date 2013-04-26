@@ -193,7 +193,7 @@ SUBARCH := $(shell uname -m | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ \
 # Note: Some architectures assign CROSS_COMPILE in their arch/*/Makefile
 export KBUILD_BUILDHOST := $(SUBARCH)
 ARCH		?= arm
-CROSS_COMPILE	?= /home//kernel/toolchains/arm-linux-androideabi-4.7/bin/arm-linux-androideabi-
+CROSS_COMPILE	?= ~/kernel/toolchains/arm-eabi-4.4.3/bin/arm-eabi-
 
 # Architecture as present in compile.h
 UTS_MACHINE 	:= $(ARCH)
@@ -364,21 +364,11 @@ LINUXINCLUDE    := -I$(srctree)/arch/$(hdr-arch)/include \
 
 KBUILD_CPPFLAGS := -D__KERNEL__
 
-NEAK_FLAGS   = -marm -march=armv7-a \
-         -mcpu=cortex-a9 -mfpu=vfp3 \
-         -fgraphite-identity -fsched-spec-load \
-         -floop-interchange -floop-strip-mine -floop-block \
-         -ffast-math -ftree-vectorize \
-         -funswitch-loops -fpredictive-commoning -fgcse-after-reload \
-         -fmodulo-sched -fmodulo-sched-allow-regmoves \
-         -fipa-cp-clone -pipe \
-         -Wno-array-bounds
-
 KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 		   -fno-strict-aliasing -fno-common \
 		   -Werror-implicit-function-declaration \
 		   -Wno-format-security \
-		   -fno-delete-null-pointer-checks $(NEAK_FLAGS)
+		   -fno-delete-null-pointer-checks
 KBUILD_AFLAGS_KERNEL :=
 KBUILD_CFLAGS_KERNEL :=
 KBUILD_AFLAGS   := -D__ASSEMBLY__
@@ -575,7 +565,7 @@ KBUILD_CFLAGS	+= -O2
 endif
 
 ifdef CONFIG_CC_CHECK_WARNING_STRICTLY
-KBUILD_CFLAGS	+= -fdiagnostics-show-option \
+KBUILD_CFLAGS	+= -fdiagnostics-show-option -Werror \
 		   -Wno-error=unused-function \
 		   -Wno-error=unused-variable \
 		   -Wno-error=unused-value \
